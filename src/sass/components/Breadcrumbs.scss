@@ -1,0 +1,9 @@
+@import "../variables";
+@import "../colors";
+
+
+.breadcrumbs {
+    margin: $spacing-x2 0;
+    font-size: $font-size-xs;
+    color: $grey-9;
+}

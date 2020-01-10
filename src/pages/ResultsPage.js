@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import SearchBar from '../components/SearchBar';
 import Container from '../components/Container';
+import Breadcrumbs from '../components/Breadcrumbs';
 import ResultsList from '../components/ResultsList';
 
 const useQuery = () => {
@@ -36,6 +37,7 @@ const ResultsPage = () => {
     return (
         <>
             <SearchBar search={searchTerm}/>
+            <Breadcrumbs/>
             <Container>
                 <div className="row">
                     <div className="col-12">
