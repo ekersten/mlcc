@@ -1,0 +1,44 @@
+@import "../variables";
+@import "../colors";
+
+.search-bar {
+    background: $yellow;
+    padding: $spacing 0;
+
+    .logo {
+        max-width: 53px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        input::placeholder {
+            font-size: $font-size-m;
+            color: $grey-9;
+        }
+
+        input {
+            font-size: $font-size-m;
+            color: $grey-3;
+            border: none;
+            border-top-left-radius: $border-radius;
+            border-bottom-left-radius: $border-radius;
+            padding: $spacing $spacing-x2;
+            flex: 1;
+        }
+
+        button {
+            border: none;
+            border-top-right-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                max-width: 60%;
+            }
+        }
+    }
+}
