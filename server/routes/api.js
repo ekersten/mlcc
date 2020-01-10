@@ -31,6 +31,7 @@ router.get('/items', function (req, res) {
             items: response.data.results.map(item => ({
                 id: item.id,
                 title: item.title,
+                city: item.address.city_name,
                 price: {
                     currency: item.currency_id,
                     amount: Math.floor(item.price),
