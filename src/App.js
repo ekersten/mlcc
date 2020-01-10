@@ -2,13 +2,11 @@ import React from 'react';
 
 import './sass/app.scss';
 
-import SearchBar from './components/SearchBar';
+import Router from './routes/Router';
 
 function App() {
     return (
-        <>
-        <SearchBar/>
-        </>
+        <Router/>
     );
 }
     
