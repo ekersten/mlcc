@@ -1,0 +1,10 @@
+@import "../variables";
+@import "../colors";
+
+.main-wrapper {
+    border-radius: $border-radius;
+    background: white;
+    -webkit-box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.03);
+    -moz-box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.03);
+    box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.03);
+}

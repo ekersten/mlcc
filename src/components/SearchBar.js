@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import Logo from '../assets/img/Logo_ML.png';
 import SearchIcon from '../assets/img/ic_Search.png';
 import '../sass/components/SearchBar.scss';
 
 const SearchBar = props => {
+
+    const history = useHistory();
+    const [search, setSearch] = useState(props.search || undefined);
+
+    const handleSearch = () => {
+        if (search !== undefined) {
+            history.push(`/items?search=${search}`)
+        }
+    }
+
     return (
         <div className="search-bar">
             <div className="container">
@@ -17,8 +27,8 @@ const SearchBar = props => {
                         </Link>
                     </div>
                     <div className="col-md-9">
-                        <form action="/items">
-                            <input type="text" name="search" placeholder="Nunca dejes de buscar" />
+                        <form action="/items" onSubmit={() => handleSearch()}>
+                            <input type="text" name="search" value={search} onChange={e => setSearch(e.target.value)} placeholder="Nunca dejes de buscar" />
                             <button><img src={SearchIcon} alt="Buscar" /></button>
                         </form>
                     </div>
