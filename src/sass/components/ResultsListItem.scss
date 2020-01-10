@@ -6,4 +6,39 @@
     display: flex;
     flex-direction: row;
     padding: $spacing-x2;
+    text-decoration: none;
+    color: $grey-3;
+
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    
+    img {
+        width: 180px;
+        height: 180px;
+        object-fit: contain;
+        border-radius: $border-radius;
+        margin-right: $spacing-x2;
+    }
+
+    .info {
+        max-width: 50%;
+        .price {
+            font-size: $font-size-l;
+            margin-bottom: $spacing-x4;
+        }
+
+        .title {
+            font-size: $font-size-m;
+        }
+    }
+
+    .location {
+        font-size: $font-size-xxs;
+        color: $grey-9;
+        margin-left: auto;
+        width: 15%;
+    }
 }
