@@ -23,8 +23,7 @@ const SearchBar = props => {
                 <div className="row">
                     <div className="col-md-1 offset-md-1">
                         <Link to="/">
-                            aa
-                            <img src={Logo} className="logo" alt="Mercado Libre" style={{display:'none'}} />
+                            <img src={Logo} className="logo" alt="Mercado Libre" />
                         </Link>
                     </div>
                     <div className="col-md-9">
