@@ -12,16 +12,20 @@ const useQuery = () => {
 
 const ResultsPage = () => {
     const [items, setItems] = useState([]);
+    const [loading, setLoading] = useState(false)
     const query = useQuery();
     const searchTerm = query.get('search');
 
     useEffect(() => {
         if (searchTerm) {
+            setLoading(true);
             axios.get(`/api/items?q=${searchTerm}&limit=4`)
                 .then(response => {
+                    setLoading(false);
                     setItems(response.data.items);
                 })
                 .catch(error => {
+                    setLoading(false);
                     console.log(error);
                 })
         }
@@ -39,7 +43,10 @@ const ResultsPage = () => {
                         {items.length > 0 ? (
                             <ResultsList items={items}/>
                         ) : (
-                            <p>No se encontraron resultados.</p>
+                            <>
+                            { loading ? <p>Buscando <strong>"{searchTerm}"</strong>...</p> : <p>No se encontraron resultados.</p>}
+                            </>
+                            
                         )}
                     </div>
                 </div>
