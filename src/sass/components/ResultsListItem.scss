@@ -1,0 +1,9 @@
+@import "../variables";
+@import "../colors";
+
+
+.results-list-item {
+    display: flex;
+    flex-direction: row;
+    padding: $spacing-x2;
+}

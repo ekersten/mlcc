@@ -1,12 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ResultsListItem = (props) => {
+import '../sass/components/ResultsListItem.scss';
+
+const ResultsListItem = ({item}) => {
 
     return (
-        <p>
-            <Link to={`/items/${props.item.id}`}>{props.item.title}</Link>
-        </p>
+        <Link to={`/items/${item.id}`}>
+            <div className="results-list-item">
+                <figure>
+                    <img src={item.picture} alt={item.title}/>
+                </figure>
+                <div className="info">
+                    <div className="title">{item.title}</div>
+                </div>
+                <div className="location">
+                    {item.city}
+                </div>
+            </div>
+        </Link>
     )
 
 }
