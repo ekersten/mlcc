@@ -8,7 +8,7 @@ const Breadcrumbs = (props) => {
                 <div className="col">
                     {props.items.map((item, index) => {
                         const last = index === props.items.length - 1;
-                        return (<span>{item}{!last ? ' > ' : null}</span>)
+                        return (<span className={last ? 'last' : null}>{item}{!last ? ' > ' : null}</span>)
                     })}
                 </div>
             </div>

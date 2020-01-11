@@ -6,4 +6,10 @@
     margin: $spacing-x2 0;
     font-size: $font-size-xs;
     color: $grey-9;
+
+    span {
+        &.last {
+            font-weight: 500;
+        }
+    }
 }
