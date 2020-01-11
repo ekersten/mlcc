@@ -45,7 +45,7 @@ const DetailPage = () => {
                                         <img src={item.picture} alt={item.title}/>
                                     </div>
                                     <div className="col-4">
-                                        <div className="sold">{item.condition === 'new' ? 'Nuevo' : 'Usado'} - {item.sold_quantity} {item.sold_quantity != 1 ? 'vendidos' : 'vendido'}</div>
+                                        <div className="sold">{item.condition === 'new' ? 'Nuevo' : 'Usado'} - {item.sold_quantity} {item.sold_quantity !== 1 ? 'vendidos' : 'vendido'}</div>
                                         <div className="title"><h1>{item.title}</h1></div>
                                         <div className="price">
                                             {item.price.currency === 'USD' ? 'U$S' : '$'} {item.price.amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} {item.price.decimals ? <span className="decimals">.{item.price.decimals}</span> : null}
