@@ -36,7 +36,7 @@
             align-items: center;
 
             .decimals {
-                font-size: $font-size-s;
+                font-size: 0.6em;
                 position: relative;
                 bottom: .25em;
                 left: 0;
@@ -61,5 +61,18 @@
     .free-shipping {
         width: 18px;
         margin-left: $spacing-x2;
+    }
+
+    @media (max-width: 576px) {
+        .info {
+            .price {
+                font-size: $font-size-s;
+                margin-bottom: $spacing;
+                font-weight: 500;
+            }
+            .title {
+                font-size: $font-size-xs;
+            }
+        }
     }
 }

@@ -5,8 +5,10 @@
     padding-top: $spacing-x4;
 
     .item-image {
-        width: 680px;
-        height: 680px;
+        max-width: 680px;
+        max-height: 680px;
+        width: 100%;
+        min-height: 280px;
         background-position: center;
         background-repeat: no-repeat;
     }
@@ -31,7 +33,7 @@
         color: $grey-3;
 
         .decimals {
-            font-size: $font-size-l;
+            font-size: 0.6em;
             position: relative;
             bottom: .6em;
             left: -.5em;
@@ -56,6 +58,40 @@
             margin-left: $spacing-x4;
             margin-bottom: $spacing-x4;
             color: $grey-3;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .item-image {
+            background-size: contain;
+        }
+
+        .sold {
+            margin-bottom: $spacing-x2;
+        }
+
+        .title {
+            margin-right: 0;
+            margin-bottom: $spacing-x2;
+        }
+
+        .buy {
+            margin-right: 0;
+        }
+
+        .description {
+            margin-top: $spacing-x4;
+
+            h2 {
+                margin-left: 0;
+                font-size: $font-size-l;
+            }
+
+            p {
+                margin-left: 0;
+                font-size: $font-size-xs;
+                line-height: 1.2em;
+            }
         }
     }
 }

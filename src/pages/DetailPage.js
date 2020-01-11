@@ -54,10 +54,10 @@ const DetailPage = () => {
                         {item ? (
                             <>
                                 <div className="row">
-                                    <div className="col-8">
+                                    <div className="col-md-8">
                                         <div className="item-image" style={{ backgroundImage: `url(${item.picture})` }}></div>
                                     </div>
-                                    <div className="col-4">
+                                    <div className="col-md-4">
                                         <div className="sold">{item.condition === 'new' ? 'Nuevo' : 'Usado'} - {item.sold_quantity} {item.sold_quantity !== 1 ? 'vendidos' : 'vendido'}</div>
                                         <h1 className="title">{item.title}</h1>
                                         <div className="price">
