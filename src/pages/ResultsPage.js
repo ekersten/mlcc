@@ -51,7 +51,7 @@ const ResultsPage = () => {
                             <ResultsList items={items}/>
                         ) : (
                             <>
-                            { loading ? <p>Buscando <strong>"{searchTerm}"</strong>...</p> : <p>No se encontraron resultados.</p>}
+                            { loading ? <p className="loading">Buscando <strong>"{searchTerm}"</strong>...</p> : <p>No se encontraron resultados.</p>}
                             </>
                             
                         )}

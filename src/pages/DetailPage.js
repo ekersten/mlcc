@@ -43,9 +43,9 @@ const DetailPage = () => {
             <SearchBar />
             <Breadcrumbs items={categories} />
             <Container>
+                {loading ? <p className="loading">Cargando...</p> : null}
                 <div className="row detail">
                     <div className="col-12">
-                        {loading ? <p>Cargando...</p> : null}
                         {item ? (
                             <>
                                 <div className="row">

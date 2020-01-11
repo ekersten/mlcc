@@ -19,3 +19,9 @@ body {
     border-radius: $border-radius;
     padding: $spacing;
 }
+
+.loading {
+    font-size: $font-size-s;
+    color: $grey-9;
+    padding: $spacing-x2;
+}
