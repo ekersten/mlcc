@@ -13,6 +13,7 @@ const useQuery = () => {
 
 const ResultsPage = () => {
     const [items, setItems] = useState([]);
+    const [categories, setCategories] = useState([]);
     const [loading, setLoading] = useState(false)
     const query = useQuery();
     const searchTerm = query.get('search');
@@ -24,6 +25,7 @@ const ResultsPage = () => {
                 .then(response => {
                     setLoading(false);
                     setItems(response.data.items);
+                    setCategories(response.data.categories);
                 })
                 .catch(error => {
                     setLoading(false);
@@ -37,11 +39,10 @@ const ResultsPage = () => {
     return (
         <>
             <SearchBar search={searchTerm}/>
-            <Breadcrumbs/>
+            <Breadcrumbs items={categories}/>
             <Container>
                 <div className="row">
                     <div className="col-12">
-                        <h1>Resultados</h1>
                         {items.length > 0 ? (
                             <ResultsList items={items}/>
                         ) : (

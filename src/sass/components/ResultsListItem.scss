@@ -28,6 +28,13 @@
         .price {
             font-size: $font-size-l;
             margin-bottom: $spacing-x4;
+
+            .decimals {
+                font-size: $font-size-s;
+                position: relative;
+                bottom: .4em;
+                left: -.2em;
+            }
         }
 
         .title {

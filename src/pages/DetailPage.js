@@ -4,9 +4,11 @@ import axios from 'axios';
 
 import SearchBar from '../components/SearchBar';
 import Container from '../components/Container';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const DetailPage = () => {
     const [item, setItem] = useState(null);
+    const [categories, setCategories] = useState([]);
     const [loading, setLoading] = useState(false)
     const { id } = useParams();
 
@@ -17,6 +19,7 @@ const DetailPage = () => {
                 .then(response => {
                     setLoading(false);
                     setItem(response.data.item);
+                    setCategories(response.data.item.category.path_from_root.map(category => category.name))
                 })
                 .catch(error => {
                     setLoading(false);
@@ -28,6 +31,7 @@ const DetailPage = () => {
     return (
         <>
             <SearchBar />
+            <Breadcrumbs items={categories} />
             <Container>
                 <div className="row">
                     <div className="col-12">
