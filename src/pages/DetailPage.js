@@ -5,9 +5,13 @@ import axios from 'axios';
 
 import '../sass/pages/DetailPage.scss';
 
+import { formatDecimals } from '../utils';
+
 import SearchBar from '../components/SearchBar';
 import Container from '../components/Container';
 import Breadcrumbs from '../components/Breadcrumbs';
+
+
 
 const DetailPage = () => {
     const [item, setItem] = useState(null);
@@ -56,7 +60,7 @@ const DetailPage = () => {
                                         <div className="sold">{item.condition === 'new' ? 'Nuevo' : 'Usado'} - {item.sold_quantity} {item.sold_quantity !== 1 ? 'vendidos' : 'vendido'}</div>
                                         <div className="title"><h1>{item.title}</h1></div>
                                         <div className="price">
-                                            {item.price.currency === 'USD' ? 'U$S' : '$'} {item.price.amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} <span className="decimals">.{item.price.decimals === 0 ? '00' : item.price.decimals}</span>
+                                            {item.price.currency === 'USD' ? 'U$S' : '$'} {item.price.amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} <span className="decimals">{formatDecimals(item.price.decimals)}</span>
                                         </div>
                                         <div className="buy">
                                             <button className="btn">Comprar</button>
