@@ -1,63 +1,64 @@
 @import "../variables";
 @import "../colors";
 
-.detail {
+.detail-page {
     padding-top: $spacing-x4;
-}
 
-.item-image {
-    width: 680px;
-    height: 680px;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.sold {
-    font-size: $font-size-xs;
-    margin-bottom: $spacing-x4;
-    color: $grey-3;
-}
-
-.title {
-    h1 {
-        font-size: $font-size-l;
-        line-height: 1.1em;
-        color: $grey-3;
+    .item-image {
+        width: 680px;
+        height: 680px;
+        background-position: center;
+        background-repeat: no-repeat;
     }
-    margin-right: $spacing-x4;
-    margin-bottom: $spacing-x4;
-}
 
-.price {
-    font-size: $font-size-xxl;
-    margin-bottom: $spacing-x4;
-    color: $grey-3;
-
-    .decimals {
-        font-size: $font-size-l;
-        position: relative;
-        bottom: .6em;
-        left: -.5em;
-    }
-}
-
-.buy {
-    margin-right: $spacing-x4;
-}
-
-.description {
-    h2 {
-        font-weight: normal;
-        font-size: $font-size-xl;
-        margin-left: $spacing-x4;
+    .sold {
+        font-size: $font-size-xs;
         margin-bottom: $spacing-x4;
         color: $grey-3;
     }
-    
-    p {
-        font-size: $font-size-s;
-        margin-left: $spacing-x4;
+
+    .title {
+        h1 {
+            font-size: $font-size-l;
+            line-height: 1.1em;
+            color: $grey-3;
+        }
+        margin-right: $spacing-x4;
+        margin-bottom: $spacing-x4;
+    }
+
+    .price {
+        font-size: $font-size-xxl;
         margin-bottom: $spacing-x4;
         color: $grey-3;
+
+        .decimals {
+            font-size: $font-size-l;
+            position: relative;
+            bottom: .6em;
+            left: -.5em;
+        }
+    }
+
+    .buy {
+        margin-right: $spacing-x4;
+    }
+
+    .description {
+        h2 {
+            font-weight: normal;
+            font-size: $font-size-xl;
+            margin-left: $spacing-x4;
+            margin-bottom: $spacing-x4;
+            color: $grey-3;
+        }
+        
+        p {
+            font-size: $font-size-s;
+            margin-left: $spacing-x4;
+            margin-bottom: $spacing-x4;
+            color: $grey-3;
+        }
     }
 }
+
