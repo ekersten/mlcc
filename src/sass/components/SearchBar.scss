@@ -28,6 +28,10 @@
             border-bottom-left-radius: $border-radius;
             padding: $spacing $spacing-x2;
             flex: 1;
+
+            &:focus {
+                outline: 0
+            }
         }
 
         button {
@@ -37,6 +41,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            &:focus {
+                outline: 0
+            }
 
             img {
                 max-width: 60%;
