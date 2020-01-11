@@ -3,7 +3,7 @@ export const formatDecimals = decimals => {
         return '00';
     }
 
-    if (decimals.toString().length == 1) {
+    if (decimals.toString().length === 1) {
         return decimals.toString() + '0';
     }
 
