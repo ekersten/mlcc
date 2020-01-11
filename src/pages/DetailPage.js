@@ -8,6 +8,7 @@ import '../sass/pages/DetailPage.scss';
 import { formatDecimals } from '../utils';
 
 import SearchBar from '../components/SearchBar';
+import Button from '../components/Button';
 import Container from '../components/Container';
 import Breadcrumbs from '../components/Breadcrumbs';
 
@@ -63,7 +64,7 @@ const DetailPage = () => {
                                             {item.price.currency === 'USD' ? 'U$S' : '$'} {item.price.amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} <span className="decimals">{formatDecimals(item.price.decimals)}</span>
                                         </div>
                                         <div className="buy">
-                                            <button className="btn">Comprar</button>
+                                            <Button>Comprar</Button>
                                         </div>
                                     </div>
                                 </div>

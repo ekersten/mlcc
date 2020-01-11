@@ -1,0 +1,19 @@
+@import "../variables";
+@import "../colors";
+
+
+.button {
+    border: none;
+    color: white;
+    background: $blue;
+    font-size: $font-size-s;
+    text-align: center;
+    display: block;
+    width: 100%;
+    border-radius: $border-radius;
+    padding: $spacing;
+
+    &:focus {
+        outline: 0
+    }
+}

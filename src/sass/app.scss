@@ -7,22 +7,6 @@ body {
     background: $grey-e;
 }
 
-.btn {
-    border: none;
-    color: white;
-    background: $blue;
-    font-size: $font-size-s;
-    text-align: center;
-    display: block;
-    width: 100%;
-    border-radius: $border-radius;
-    padding: $spacing;
-
-    &:focus {
-        outline: 0
-    }
-}
-
 .loading {
     font-size: $font-size-s;
     color: $grey-9;
