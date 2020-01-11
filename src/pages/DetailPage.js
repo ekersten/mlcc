@@ -71,7 +71,7 @@ const DetailPage = () => {
                                 <div className="row col-md-8 description">
                                     <h2>Descripción del producto</h2>
                                     <p>{item.description.split('\n').map((item, key) => {
-                                        return <span key={key}>{item}<br /></span>
+                                        return (<>{item}<br /></>)
                                     })}</p>
                                 </div>
                                 
