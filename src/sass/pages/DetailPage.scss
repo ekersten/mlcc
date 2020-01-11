@@ -18,11 +18,9 @@
     }
 
     .title {
-        h1 {
-            font-size: $font-size-l;
-            line-height: 1.1em;
-            color: $grey-3;
-        }
+        font-size: $font-size-l;
+        line-height: 1.1em;
+        color: $grey-3;
         margin-right: $spacing-x4;
         margin-bottom: $spacing-x4;
     }

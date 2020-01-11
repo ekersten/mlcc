@@ -59,7 +59,7 @@ const DetailPage = () => {
                                     </div>
                                     <div className="col-4">
                                         <div className="sold">{item.condition === 'new' ? 'Nuevo' : 'Usado'} - {item.sold_quantity} {item.sold_quantity !== 1 ? 'vendidos' : 'vendido'}</div>
-                                        <div className="title"><h1>{item.title}</h1></div>
+                                        <h1 className="title">{item.title}</h1>
                                         <div className="price">
                                             {item.price.currency === 'USD' ? 'U$S' : '$'} {item.price.amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} <span className="decimals">{formatDecimals(item.price.decimals)}</span>
                                         </div>
