@@ -5,10 +5,8 @@
     padding-top: $spacing-x4;
 
     .item-image {
-        max-width: 680px;
-        max-height: 680px;
-        width: 100%;
-        min-height: 280px;
+        width: 680px;
+        height: 680px;
         background-position: center;
         background-repeat: no-repeat;
     }
@@ -64,6 +62,9 @@
     @media (max-width: 576px) {
         .item-image {
             background-size: contain;
+            width: 100%;
+            height: auto;
+            min-height: 280px;
         }
 
         .sold {
