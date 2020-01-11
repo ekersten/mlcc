@@ -1,0 +1,33 @@
+@import "../variables";
+@import "../colors";
+
+.sold {
+    font-size: $font-size-xs;
+    margin-bottom: $spacing-x4;
+}
+
+.title {
+    h1 {
+        font-size: $font-size-l;
+    }
+    margin-right: $spacing-x4;
+    margin-bottom: $spacing-x4;
+}
+
+.price {
+    font-size: $font-size-xxl;
+    margin-bottom: $spacing-x4;
+}
+
+.description {
+    h2 {
+        font-weight: normal;
+        font-size: $font-size-xl;
+        margin-left: $spacing-x4;
+    }
+
+    p {
+        font-size: $font-size-s;
+        margin-left: $spacing-x4;
+    }
+}
