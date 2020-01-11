@@ -56,7 +56,7 @@ const DetailPage = () => {
                                         <div className="sold">{item.condition === 'new' ? 'Nuevo' : 'Usado'} - {item.sold_quantity} {item.sold_quantity !== 1 ? 'vendidos' : 'vendido'}</div>
                                         <div className="title"><h1>{item.title}</h1></div>
                                         <div className="price">
-                                            {item.price.currency === 'USD' ? 'U$S' : '$'} {item.price.amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} {item.price.decimals ? <span className="decimals">.{item.price.decimals}</span> : null}
+                                            {item.price.currency === 'USD' ? 'U$S' : '$'} {item.price.amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} <span className="decimals">.{item.price.decimals === 0 ? '00' : item.price.decimals}</span>
                                         </div>
                                         <div className="buy">
                                             <button className="btn">Comprar</button>

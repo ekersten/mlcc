@@ -32,6 +32,13 @@
     font-size: $font-size-xxl;
     margin-bottom: $spacing-x4;
     color: $grey-3;
+
+    .decimals {
+        font-size: $font-size-l;
+        position: relative;
+        bottom: .6em;
+        left: -.5em;
+    }
 }
 
 .buy {
