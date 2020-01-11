@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from "react-helmet";
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 
@@ -38,6 +39,9 @@ const ResultsPage = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Mercado Libre - Resultados para "{searchTerm}"</title>
+            </Helmet>
             <SearchBar search={searchTerm}/>
             <Breadcrumbs items={categories}/>
             <Container>

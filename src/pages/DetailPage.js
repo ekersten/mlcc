@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from "react-helmet";
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
@@ -30,8 +31,15 @@ const DetailPage = () => {
         }
     }, [id]);
 
+    const pageTitle = item ? `Mercado Libre - ${item.title}` : 'Mercado Libre';
+    const pageDescription = item ? item.description.substring(0, 150) : '';
+
     return (
-        <>
+        <>  
+            <Helmet>
+                <title>{pageTitle}</title>
+                <meta name="description" content={pageDescription} />
+            </Helmet>
             <SearchBar />
             <Breadcrumbs items={categories} />
             <Container>
