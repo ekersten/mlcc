@@ -5,8 +5,9 @@
     padding-top: $spacing-x4;
 
     .item-image {
-        width: 680px;
-        height: 680px;
+        max-width: 680px;
+        min-height: 680px;
+        width: 100%;
         background-position: center;
         background-repeat: no-repeat;
     }
