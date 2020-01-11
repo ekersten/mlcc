@@ -30,6 +30,8 @@
         .price {
             font-size: $font-size-l;
             margin-bottom: $spacing-x4;
+            display: flex;
+            align-items: center;
 
             .decimals {
                 font-size: $font-size-s;
@@ -49,5 +51,10 @@
         color: $grey-9;
         margin-left: auto;
         width: 15%;
+    }
+
+    .free-shipping {
+        width: 18px;
+        margin-left: $spacing-x2;
     }
 }
