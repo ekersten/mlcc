@@ -8,6 +8,8 @@
     padding: $spacing-x2;
     text-decoration: none;
     color: $grey-3;
+    border-bottom: 1px solid $grey-e;
+    align-items: center;
 
     &:hover {
         text-decoration: none;
@@ -29,7 +31,7 @@
         max-width: 50%;
         .price {
             font-size: $font-size-l;
-            margin-bottom: $spacing-x4;
+            margin-bottom: $spacing-x2;
             display: flex;
             align-items: center;
 
@@ -43,6 +45,9 @@
 
         .title {
             font-size: $font-size-m;
+            font-weight: normal;
+            max-width: 70%;
+            line-height: 1.1em;
         }
     }
 

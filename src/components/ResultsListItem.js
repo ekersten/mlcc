@@ -19,11 +19,11 @@ const ResultsListItem = ({item}) => {
                         <img src={IconShipping} className="free-shipping" alt="Envío gratis"/>
                     ) : null}    
                 </div>
-                <div className="title">{item.title}</div>
+                <h2 className="title">{item.title}</h2>
             </div>
-            <div className="location">
+            <p className="location">
                 {item.city}
-            </div>
+            </p>
         </Link>
     )
 
