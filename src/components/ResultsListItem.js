@@ -7,7 +7,7 @@ const ResultsListItem = ({item}) => {
 
     return (
         <Link to={`/items/${item.id}`} className="results-list-item">
-            <img src={item.picture} alt={item.title}/>
+            <div className="item-image" style={{ backgroundImage: `url(${item.picture})`}}></div>
             <div className="info">
                 <div className="price">{item.price.currency === 'USD' ? 'U$S' : '$'} {item.price.amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")} {item.price.decimals ? <span className="decimals">.{item.price.decimals}</span> : null}</div>
                 <div className="title">{item.title}</div>

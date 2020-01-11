@@ -15,10 +15,12 @@
     }
 
     
-    img {
+    .item-image {
         width: 180px;
         height: 180px;
-        object-fit: contain;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
         border-radius: $border-radius;
         margin-right: $spacing-x2;
     }

@@ -21,12 +21,12 @@ const SearchBar = props => {
         <div className="search-bar">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-1 offset-md-1">
+                    <div className="col-1">
                         <Link to="/">
                             <img src={Logo} className="logo" alt="Mercado Libre" />
                         </Link>
                     </div>
-                    <div className="col-md-9">
+                    <div className="col-11">
                         <form action="/items" onSubmit={() => handleSearch()}>
                             <input type="text" name="search" value={search} onChange={e => setSearch(e.target.value)} placeholder="Nunca dejes de buscar" />
                             <button><img src={SearchIcon} alt="Buscar" /></button>

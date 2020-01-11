@@ -35,14 +35,14 @@ const DetailPage = () => {
             <SearchBar />
             <Breadcrumbs items={categories} />
             <Container>
-                <div className="row">
+                <div className="row detail">
                     <div className="col-12">
                         {loading ? <p>Cargando...</p> : null}
                         {item ? (
                             <>
                                 <div className="row">
                                     <div className="col-8">
-                                        <img src={item.picture} alt={item.title}/>
+                                        <div className="item-image" style={{ backgroundImage: `url(${item.picture})` }}></div>
                                     </div>
                                     <div className="col-4">
                                         <div className="sold">{item.condition === 'new' ? 'Nuevo' : 'Usado'} - {item.sold_quantity} {item.sold_quantity !== 1 ? 'vendidos' : 'vendido'}</div>
@@ -57,7 +57,9 @@ const DetailPage = () => {
                                 </div>
                                 <div className="row col-md-8 description">
                                     <h2>Descripción del producto</h2>
-                                    <p>{item.description}</p>
+                                    <p>{item.description.split('\n').map((item, key) => {
+                                        return <span key={key}>{item}<br /></span>
+                                    })}</p>
                                 </div>
                                 
                             </>
